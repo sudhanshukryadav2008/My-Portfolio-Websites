@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking any nav item
+    // Close mobile menu when clicking any link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. Scroll Spy (Highlight active nav link) ---
+    // --- 2. Scroll Spy (Highlight active link) ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.3)';
+            header.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.4)';
         } else {
             header.style.boxShadow = 'none';
         }
     });
 
-    // --- 4. Contact Form Handler ---
+    // --- 4. Contact Form Submission Handler ---
     const contactForm = document.querySelector('.contact-box');
 
     if (contactForm) {
