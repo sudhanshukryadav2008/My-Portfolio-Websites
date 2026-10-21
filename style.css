@@ -24,7 +24,7 @@ header {
     border-radius: 3rem;
     z-index: 1000;
     width: fit-content;
-    max-width: 90%;
+    max-width: 92%;
     transition: all 0.3s ease;
 }
 
@@ -42,8 +42,8 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
-    font-size: 0.95rem;
+    gap: 1.2rem;
+    font-size: 0.9rem;
     align-items: center;
 }
 
@@ -147,7 +147,8 @@ section {
     text-align: center;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    max-width: 650px;
 }
 
 .info-box h2 {
@@ -166,8 +167,20 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
+}
+
+.intro-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+    background: #f8fafc;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    border-left: 4px solid #009dff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .btn-group {
@@ -327,6 +340,127 @@ section {
     color: #475569;
 }
 
+/* EXPERIENCE SECTION */
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    background-color: black;
+    color: white;
+}
+
+.experience-card:hover p, 
+.experience-card:hover .event-name {
+    color: #ddd;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlight-icon {
+    font-size: 2.2rem;
+    color: #ff00ff;
+}
+
+.experience-card h3 {
+    font-size: 1.3rem;
+}
+
+.year-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #009dff;
+}
+
+.role-badge {
+    display: inline-block;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    color: white;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.event-name {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CERTIFICATIONS SECTION */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cert-card {
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cert-card h3 {
+    font-size: 1.1rem;
+}
+
+.cert-card p {
+    font-size: 0.88rem;
+    color: #666;
+}
+
+.cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
 /* PROJECTS SECTION */
 .projects-grid {
     display: grid;
@@ -439,13 +573,13 @@ footer ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 footer ul li a {
     color: black;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -508,7 +642,7 @@ footer ul li a:hover {
     }
 
     .btn-text {
-        display: none; /* Shows icon only on small screens */
+        display: none;
     }
 
     .visit-btn i {
@@ -535,7 +669,7 @@ footer ul li a:hover {
         padding: 1.2rem 1rem;
         border-radius: 1.2rem;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        gap: 0.8rem;
+        gap: 0.6rem;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease-in-out;
     }
@@ -547,10 +681,10 @@ footer ul li a:hover {
     }
 
     .nav-links li a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         font-weight: 400;
         display: block;
-        padding: 0.3rem 0;
+        padding: 0.2rem 0;
         text-align: center;
     }
 
@@ -569,6 +703,11 @@ footer ul li a:hover {
 
     .info-box h1 {
         font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 0.88rem;
+        padding: 1rem;
     }
 
     section {
