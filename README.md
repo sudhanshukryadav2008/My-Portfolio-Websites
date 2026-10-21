@@ -2,7 +2,7 @@
 <br>
 # 🚀 Sudhanshu Kumar - Personal Portfolio Website
 
-Welcome to the official repository for my personal developer portfolio website! This clean, responsive, multi-section web application showcases my background, technical skills, education, projects, and contact channels.
+Welcome to the official repository for my personal developer portfolio website! This clean, responsive, multi-section web application highlights my background, technical skills, academic journey, hackathon achievements, verified certifications, projects, and contact channels.
 
 ---
 
@@ -11,33 +11,52 @@ Welcome to the official repository for my personal developer portfolio website! 
 * **Name:** Sudhanshu Kumar
 * **Roles:** Frontend Developer | Team Leader | Content Creator
 * **Education:** BCA in Data Science & Artificial Intelligence (Department of Computer Science and Information System)
-* **High Schooling:** 
-  * Class 12th: New Lucknow Montessori Inter College
-  * Class 10th: Colvin Public High School, Rajiv Nagar, Lucknow
+* **Schooling:** 
+  * **Class 12th:** New Lucknow Montessori Inter College (Completed: 2026)
+  * **Class 10th:** Colvin Public High School, Rajiv Nagar, Lucknow (Completed: 2024)
+
+---
+
+## 📝 Statement / Introduction
+
+> *"Thank you for this opportunity. My name is Sudhanshu Kumar, and I am a 1st-year BCA student specializing in Data Science & Artificial Intelligence. Right now, I am actively building my foundation in Python programming, problem-solving, and core computer science fundamentals, alongside learning how data shapes modern technology. What drove me to pick Data Science & AI right from my first year is my passion for technology and curiosity about how algorithms learn from data. I am eager to start applying my foundational skills, learn from experienced mentors, and grow step-by-step into a practical data professional."*
 
 ---
 
 ## ✨ Key Features
 
-* **Compact Mobile Navbar:** Customized responsive navigation bar designed to stay sleek and compact on mobile screens without blocking page content.
-* **Modern Design:** Floating glassmorphism navigation bar with linear gradient accents.
-* **Smooth Navigation:** Interactive scroll spy highlighting active menu sections automatically.
-* **Comprehensive Portfolio Sections:**
-  * **Hero / About:** Profile summary, quick contact button, and direct profile badges.
+* **Compact Mobile Navigation:** Sleek, responsive floating navbar with custom mobile drawer optimized for mobile screens.
+* **Modern Design & Styling:** Dark floating glassmorphism header, gradient accents, and border-card layouts matching personal theme.
+* **Interactive Navigation & Scroll Spy:** Automatically highlights active navbar links on scroll.
+* **Portfolio Sections:**
+  * **Hero / About:** Quick introduction, CV/Github buttons, and direct social profile badges.
+  * **Introduction:** Dedicated highlight section featuring the personal statement and career vision.
   * **Skills:** Experience breakdown in Frontend Development, Video Editing, Audio Editing, and Content Creation.
-  * **Education Timeline:** Displays ongoing BCA (Data Science & AI) and school education details.
-  * **Recent Projects:** Portfolio card grid highlighting recent social media content creation and editing work.
-  * **Contact Section:** Form input with email validation and submit handler.
-* **Direct Social Media Integration:** Icons pointing directly to GitHub, LinkedIn, Personal Instagram, Tech Instagram, and YouTube.
+  * **Education:** Details ongoing BCA (Data Science & AI) and completed Class 10/12 schooling.
+  * **Experience & Hackathons:** Highlights leadership as Team Leader of **SK Coders** (Round 2 Finalists at NYC Hackathon 2026).
+  * **Certifications:** Includes direct link verifications for NYC Hackathon Round 1 and Round 2 certificates.
+  * **Recent Projects:** Portfolio grid linking directly to Instagram channels (`@veltrix.editor` and `@codewithsudhanshu944`).
+  * **Contact Section:** Form input card with validation and submit handler.
 
 ---
 
-## 🔗 Social Media Links
+## 🏆 Experience & Certifications
+
+* **Team Leader – SK Coders (2026)**
+  * **NYC Hackathon (Not Your College):** Round 2 Finalist. Led team SK Coders through competitive problem solving and practical project development.
+* **Verified Certificates:**
+  * 📜 [NYC Hackathon Round 1 Certificate](https://notyourcollege.com/verify/CERT-2026-R8JKKB)
+  * 📜 [NYC Hackathon Round 2 Certificate](https://notyourcollege.com/verify/CERT-2026-RR5759)
+
+---
+
+## 🔗 Social Media & Projects
 
 * 🐙 **GitHub:** [sudhanshukryadav2008](https://github.com/sudhanshukryadav2008)
 * 💼 **LinkedIn:** [Sudhanshu Kumar](https://www.linkedin.com/in/sudhanshu-kumar-b62113407/?isSelfProfile=false)
 * 📸 **Personal Instagram:** [@sudhanshukumar_08](https://www.instagram.com/sudhanshukumar_08/)
 * 💻 **Tech Instagram:** [@codewithsudhanshu944](https://www.instagram.com/codewithsudhanshu944/)
+* 🎬 **Veltrix Editor:** [@veltrix.editor](https://www.instagram.com/veltrix.editor/)
 * 🎥 **YouTube Channel:** [@CodeWithSudhanshu](https://www.youtube.com/@CodeWithSudhanshu)
 
 ---
@@ -45,10 +64,10 @@ Welcome to the official repository for my personal developer portfolio website! 
 ## 📁 File Structure
 
 ```text
-├── index.html          # Semantic HTML layout with social & education sections
-├── style.css           # Styling, glassmorphism header, compact mobile nav, & gradients
-├── Script.js           # Scroll spy, mobile menu toggle, & contact form logic
+├── index.html          # Main HTML structure including Intro, Experience & Certifications
+├── style.css           # Styling, glassmorphism navbar, compact mobile menu, & theme cards
+├── Script.js           # Scroll spy, mobile menu toggle, & contact form submission handler
 ├── README.md           # Project documentation
-├── me.jpeg             # Profile image
-├── Video Editing 1.png   # Project preview image 1
-└── Video editing 2.png   # Project preview image 2
+├── me.jpeg             # Profile picture
+├── Video Editing 1.png # Project preview image 1
+└── Video editing 2.png # Project preview image 2
