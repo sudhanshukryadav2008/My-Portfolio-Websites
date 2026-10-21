@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. Scroll Spy (Highlight active link) ---
+    // --- 2. Scroll Spy (Highlight active section) ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
