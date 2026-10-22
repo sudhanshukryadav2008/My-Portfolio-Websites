@@ -1,26 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Scroll Reveal Observer ---
-    const reveals = document.querySelectorAll('.reveal');
-
-    function revealOnScroll() {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 100;
-
-        reveals.forEach(reveal => {
-            const elementTop = reveal.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - elementVisible) {
-                reveal.classList.add('active');
-            }
-        });
-    }
-
-    // Trigger reveal immediately for hero section and on scroll
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
-    // --- 2. Mobile Menu Toggle ---
+    // --- 1. Mobile Menu Toggle ---
     const menuBtn = document.getElementById('menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
@@ -44,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Scroll Spy (Highlight active navbar link) ---
+    // --- 2. Scroll Spy (Highlight active section) ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
@@ -67,18 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 4. Floating Navbar Shadow Effect on Scroll ---
+    // --- 3. Floating Navbar Shadow Effect ---
     const header = document.querySelector('header');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 40) {
-            header.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.45)';
+            header.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.4)';
         } else {
             header.style.boxShadow = 'none';
         }
     });
 
-    // --- 5. Contact Form Submission Handler ---
+    // --- 4. Contact Form Submission Handler ---
     const contactForm = document.querySelector('.contact-box');
 
     if (contactForm) {
