@@ -5,50 +5,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     if (menuBtn && navLinks) {
-        menuBtn.addEventListener('click', (e) => {
+        menuBtn.onclick = function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
             
-            // Toggle icon between bars and close cross
             if (navLinks.classList.contains('active')) {
-                menuBtn.classList.remove('fa-bars');
-                menuBtn.classList.add('fa-xmark');
+                menuBtn.classList.replace('fa-bars', 'fa-xmark');
             } else {
-                menuBtn.classList.remove('fa-xmark');
-                menuBtn.classList.add('fa-bars');
+                menuBtn.classList.replace('fa-xmark', 'fa-bars');
             }
-        });
-    }
+        };
 
-    // Close mobile menu when clicking any nav link
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks && navLinks.classList.contains('active')) {
+        // Close menu when clicking any link
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.onclick = function() {
                 navLinks.classList.remove('active');
-                if (menuBtn) {
-                    menuBtn.classList.remove('fa-xmark');
-                    menuBtn.classList.add('fa-bars');
-                }
-            }
+                menuBtn.classList.replace('fa-xmark', 'fa-bars');
+            };
         });
-    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navLinks && navLinks.classList.contains('active')) {
+        // Close menu when clicking outside
+        document.onclick = function(e) {
             if (!navLinks.contains(e.target) && e.target !== menuBtn) {
                 navLinks.classList.remove('active');
-                if (menuBtn) {
-                    menuBtn.classList.remove('fa-xmark');
-                    menuBtn.classList.add('fa-bars');
-                }
+                menuBtn.classList.replace('fa-xmark', 'fa-bars');
             }
-        }
-    });
+        };
+    }
 
     // --- 2. Scroll Spy (Highlight active section) ---
     const sections = document.querySelectorAll('section');
+    const allLinks = document.querySelectorAll('.nav-links a');
 
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
@@ -62,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        links.forEach(link => {
+        allLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${currentSectionId}`) {
                 link.classList.add('active');
