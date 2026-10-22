@@ -5,13 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     if (menuBtn && navLinks) {
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
-            menuBtn.classList.toggle('fa-xmark');
+            
+            // Toggle between bars and close icon
+            if (navLinks.classList.contains('active')) {
+                menuBtn.classList.remove('fa-bars');
+                menuBtn.classList.add('fa-xmark');
+            } else {
+                menuBtn.classList.remove('fa-xmark');
+                menuBtn.classList.add('fa-bars');
+            }
         });
     }
 
-    // Close mobile menu when clicking any link
+    // Close mobile menu when clicking any navigation link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -19,12 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
                 if (menuBtn) {
                     menuBtn.classList.remove('fa-xmark');
+                    menuBtn.classList.add('fa-bars');
                 }
             }
         });
     });
 
-    // --- 2. Scroll Spy (Highlight active section) ---
+    // Close mobile menu when clicking anywhere outside the navbar
+    document.addEventListener('click', (e) => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!navLinks.contains(e.target) && e.target !== menuBtn) {
+                navLinks.classList.remove('active');
+                if (menuBtn) {
+                    menuBtn.classList.remove('fa-xmark');
+                    menuBtn.classList.add('fa-bars');
+                }
+            }
+        }
+    });
+
+    // --- 2. Scroll Spy (Highlight active section in navbar) ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
