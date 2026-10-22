@@ -47,7 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Floating Navbar Shadow Effect ---
+    // --- 3. Scroll Reveal Observer ---
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(el => revealObserver.observe(el));
+
+    // --- 4. Floating Navbar Shadow Effect ---
     const header = document.querySelector('header');
 
     window.addEventListener('scroll', () => {
@@ -58,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 4. Contact Form Submission Handler ---
+    // --- 5. Contact Form Submission Handler ---
     const contactForm = document.querySelector('.contact-box');
 
     if (contactForm) {
