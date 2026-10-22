@@ -14,9 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================================================= */
-/* 🔥 COMPACT FLOATING HEADER 🔥                              */
-/* ========================================================= */
+/* COMPACT FLOATING HEADER */
 header {
     position: fixed;
     top: 0.6rem;
@@ -43,11 +41,6 @@ header {
     font-weight: 600;
     color: #fff;
     white-space: nowrap;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.03);
 }
 
 .nav-links {
@@ -104,13 +97,7 @@ li a.active::before {
     color: white;
     cursor: pointer;
     white-space: nowrap;
-    transition: 0.3s ease-in-out;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
-}
-
-.visit-btn:hover {
-    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
-    transform: scale(1.03);
 }
 
 #menu-btn {
@@ -133,21 +120,7 @@ section {
     margin-bottom: 2rem;
 }
 
-/* SCROLL REVEAL ANIMATIONS */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ========================================================= */
-/* 📸 ABOUT SECTION - CIRCULAR IMAGE RESTORED 📸             */
-/* ========================================================= */
+/* ABOUT SECTION - PERFECT CIRCLE IMAGE */
 .about {
     display: flex;
     align-items: center;
@@ -162,23 +135,13 @@ section {
     flex-wrap: wrap;
 }
 
-.img-wrapper {
-    position: relative;
-}
-
-/* CLEAN CIRCULAR IMAGE STYLE */
 .about img {
     width: 260px;
     height: 260px;
     object-fit: cover;
     border-radius: 50%; /* Perfect Circle */
+    border: 3px solid #000;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
 }
 
 .info-box {
@@ -662,7 +625,7 @@ footer ul li a:hover {
     background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
-/* MOBILE RESPONSIVE NAVBAR FIXES */
+/* MOBILE RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
     header {
         top: 0.5rem;
