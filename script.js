@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Mobile Menu Toggle ---
+    // --- Mobile Menu Toggle ---
     const menuBtn = document.getElementById('menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking any link
+    // Close mobile menu when clicking a link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. Scroll Spy (Highlight active section) ---
+    // --- Scroll Spy ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
@@ -47,43 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Scroll Reveal Observer ---
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    animatedElements.forEach(el => revealObserver.observe(el));
-
-    // --- 4. Floating Navbar Shadow Effect ---
-    const header = document.querySelector('header');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            header.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.4)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
-    });
-
-    // --- 5. Contact Form Submission Handler ---
+    // --- Contact Form Submission ---
     const contactForm = document.querySelector('.contact-box');
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
             const emailInput = contactForm.querySelector('input[type="email"]');
             const userEmail = emailInput.value.trim();
 
