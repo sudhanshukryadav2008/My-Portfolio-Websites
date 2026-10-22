@@ -15,6 +15,21 @@ body {
 }
 
 /* ========================================================= */
+/* ✨ ANIMATION REVEAL CLASSES ✨                            */
+/* ========================================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================================= */
 /* 🔥 COMPACT FLOATING HEADER 🔥                              */
 /* ========================================================= */
 header {
@@ -101,11 +116,12 @@ li a.active::before {
     white-space: nowrap;
     transition: 0.3s ease-in-out;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    box-shadow: 0 4px 12px rgba(0, 157, 255, 0.2);
 }
 
 .visit-btn:hover {
     background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
-    transform: scale(1.03);
+    transform: translateY(-2px) scale(1.03);
 }
 
 #menu-btn {
@@ -126,10 +142,11 @@ section {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 /* ========================================================= */
-/* 📸 ABOUT SECTION - CIRCULAR IMAGE (NO BLACK RING) 📸      */
+/* 📸 ABOUT SECTION - CIRCULAR IMAGE 📸                      */
 /* ========================================================= */
 .about {
     display: flex;
@@ -150,19 +167,20 @@ section {
     position: relative;
 }
 
-/* Perfect Circular Image */
 .about img {
     width: 260px;
     height: 260px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%; /* Perfect Circle */
+    border: 2px solid rgba(0, 0, 0, 0.15);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about img:hover {
-    transform: scale(1.04);
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 157, 255, 0.2);
+    border-color: #009dff;
 }
 
 .info-box {
@@ -219,7 +237,7 @@ section {
     cursor: pointer;
     font-weight: 500;
     white-space: nowrap;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     font-size: 0.95rem;
     background: transparent;
     color: black;
@@ -228,7 +246,8 @@ section {
 .btn:hover {
     background-color: black;
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .social-icon {
@@ -241,11 +260,11 @@ section {
 .social-icon a {
     color: black;
     font-size: 1.5rem;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .social-icon a:hover {
-    transform: scale(1.2);
+    transform: translateY(-4px) scale(1.2);
     color: #ff00ff;
 }
 
@@ -271,19 +290,25 @@ section {
     flex-direction: column;
     align-items: flex-start;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: #ffffff;
 }
 
 .grid-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     background-color: black;
     color: white;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
 }
 
 .grid-card i {
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.grid-card:hover i {
+    transform: scale(1.15);
 }
 
 .grid-card span {
@@ -315,7 +340,7 @@ section {
     border-radius: 1.2rem;
     padding: 1.4rem;
     position: relative;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: #fff;
 }
 
@@ -376,13 +401,14 @@ section {
     border-radius: 1.2rem;
     padding: 1.6rem;
     background: #ffffff;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .experience-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     background-color: black;
     color: white;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
 }
 
 .experience-card:hover p, 
@@ -452,12 +478,12 @@ section {
     align-items: center;
     text-align: center;
     gap: 0.6rem;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
     background: #ffffff;
 }
 
 .cert-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
@@ -503,7 +529,7 @@ section {
     border: 2px solid black;
     border-radius: 1.2rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: #ffffff;
 }
 
@@ -518,17 +544,18 @@ section {
     max-height: 160px;
     object-fit: cover;
     border-radius: 0.8rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .projects-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .projects-card:hover {
     background-color: black;
     color: white;
     transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .projects-card:hover .btn {
@@ -581,12 +608,12 @@ section {
     border: 2px solid black;
     border-radius: 3rem;
     outline: none;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .input-wrapper input:focus {
     border-color: #ff00ff;
-    box-shadow: 0 0 8px rgba(255, 0, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
 }
 
 .submit-btn {
@@ -632,7 +659,7 @@ footer ul li a:hover {
 .footer-socials a {
     color: black;
     font-size: 1.2rem;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-socials a:hover {
