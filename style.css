@@ -15,7 +15,7 @@ body {
 }
 
 /* ========================================================= */
-/* COMPACT FLOATING HEADER                                    */
+/* 🔥 COMPACT FLOATING HEADER 🔥                              */
 /* ========================================================= */
 header {
     position: fixed;
@@ -145,9 +145,7 @@ section {
     transform: translateY(0);
 }
 
-/* ========================================================= */
-/* ABOUT SECTION (REMOVED CIRCULAR BORDER, PROFESSIONAL SHAPE) */
-/* ========================================================= */
+/* ABOUT SECTION - NO BLACK CIRCLE */
 .about {
     display: flex;
     align-items: center;
@@ -162,46 +160,44 @@ section {
     flex-wrap: wrap;
 }
 
-/* Image styling without black circle */
 .img-wrapper {
     position: relative;
 }
 
+/* Updated profile image styling without black circle */
 .about img {
     width: 270px;
-    height: 320px;
+    height: 310px;
     object-fit: cover;
-    border-radius: 1.5rem; /* Clean rounded rectangular card shape */
-    border: none; /* Black circular border completely removed */
+    border-radius: 1.5rem; /* Clean rounded card instead of circle */
+    border: none;          /* Completely removed black circle border */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .about img:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 .info-box {
     display: flex;
     flex-direction: column;
-    text-align: left; /* Left-aligned for a crisp professional resume look */
-    align-items: flex-start;
-    gap: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     max-width: 620px;
 }
 
 .info-box h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: #666;
+    opacity: 0.8;
 }
 
 .info-box h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    color: #111;
-    line-height: 1.2;
 }
 
 .info-box span {
@@ -213,16 +209,16 @@ section {
     font-weight: 600;
 }
 
-/* Professional Bio Statement Styling */
 .intro-statement {
-    font-size: 0.96rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: #333;
     background: #ffffff;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.4rem;
     border-radius: 1rem;
     border-left: 4px solid #009dff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    text-align: justify;
 }
 
 .btn-group {
@@ -233,7 +229,7 @@ section {
 .btn {
     display: inline-block;
     border-radius: 3rem;
-    padding: 0.55rem 1.6rem;
+    padding: 0.5rem 1.4rem;
     border: 2px solid black;
     cursor: pointer;
     font-weight: 500;
@@ -253,10 +249,11 @@ section {
     display: flex;
     gap: 1.2rem;
     align-items: center;
+    margin-top: 0.3rem;
 }
 
 .social-icon a {
-    color: #222;
+    color: black;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
 }
@@ -648,18 +645,21 @@ footer ul li a:hover {
     color: #666;
 }
 
-/* MOBILE RESPONSIVE FIXES */
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(220, 220, 220);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #009dff, #ff00ff);
+}
+
+/* MOBILE RESPONSIVE NAVBAR FIXES */
 @media (max-width: 768px) {
-    .info-box {
-        align-items: center;
-        text-align: center;
-    }
-
-    .about img {
-        width: 220px;
-        height: 260px;
-    }
-
     header {
         top: 0.5rem;
         width: 94%;
@@ -718,6 +718,15 @@ footer ul li a:hover {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .about img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .info-box h1 {
+        font-size: 1.8rem;
     }
 
     section {
