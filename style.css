@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
 }
 
+/* HEADER & NAVBAR */
 header {
     position: fixed;
     top: 0.6rem;
@@ -68,6 +69,7 @@ li a::before {
     bottom: -3px;
     border-radius: 1rem;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    transition: width 0.3s ease;
 }
 
 li a:hover::before,
@@ -101,6 +103,7 @@ li a.active::before {
     display: none;
     cursor: pointer;
     color: white;
+    z-index: 1001;
 }
 
 section {
@@ -117,6 +120,7 @@ section {
     margin-bottom: 2rem;
 }
 
+/* ABOUT SECTION */
 .about {
     display: flex;
     align-items: center;
@@ -202,6 +206,7 @@ section {
     font-size: 0.95rem;
     background: transparent;
     color: black;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -219,12 +224,14 @@ section {
 .social-icon a {
     color: black;
     font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .social-icon a:hover {
     color: #ff00ff;
 }
 
+/* SKILLS SECTION */
 .skills-info {
     display: flex;
     align-items: center;
@@ -247,6 +254,7 @@ section {
     align-items: flex-start;
     cursor: pointer;
     background: #ffffff;
+    transition: 0.3s ease;
 }
 
 .grid-card:hover {
@@ -274,6 +282,7 @@ section {
     margin-bottom: 0.3rem;
 }
 
+/* EDUCATION SECTION */
 .education-container {
     display: flex;
     flex-direction: column;
@@ -331,6 +340,7 @@ section {
     color: #475569;
 }
 
+/* ACHIEVEMENTS & CERTIFICATIONS SECTION */
 .experience-container {
     max-width: 800px;
     margin: 0 auto;
@@ -341,6 +351,7 @@ section {
     border-radius: 1.2rem;
     padding: 1.6rem;
     background: #ffffff;
+    transition: 0.3s ease;
 }
 
 .experience-card:hover {
@@ -443,6 +454,7 @@ section {
     margin-top: 0.4rem;
 }
 
+/* PROJECTS SECTION */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -459,6 +471,7 @@ section {
     border: 2px solid black;
     border-radius: 1.2rem;
     background: #ffffff;
+    transition: 0.3s ease;
 }
 
 .projects-card img {
@@ -483,6 +496,7 @@ section {
     color: black;
 }
 
+/* CONTACT SECTION */
 .contact {
     display: flex;
     flex-direction: column;
@@ -522,6 +536,7 @@ section {
     border: 2px solid black;
     border-radius: 3rem;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
 .input-wrapper input:focus {
@@ -533,6 +548,7 @@ section {
     font-size: 0.95rem;
 }
 
+/* FOOTER */
 footer {
     padding: 2rem 1rem;
     display: flex;
@@ -555,6 +571,7 @@ footer ul li a {
     color: black;
     font-weight: 500;
     font-size: 0.85rem;
+    transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
@@ -569,6 +586,7 @@ footer ul li a:hover {
 .footer-socials a {
     color: black;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
@@ -580,6 +598,7 @@ footer ul li a:hover {
     color: #666;
 }
 
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 7px;
 }
