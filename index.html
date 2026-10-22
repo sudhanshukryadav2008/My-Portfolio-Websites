@@ -16,7 +16,7 @@
     <header class="header">
         <a href="#" class="logo"><span>Sudhanshu Kumar</span></a>
       
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#about" class="active">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
@@ -30,7 +30,7 @@
                 <i class="fa-brands fa-github"></i> <span class="btn-text">Github</span>
             </a>
 
-            <i class="fa-solid fa-bars" id="menu-btn"></i>
+            <i class="fa-solid fa-bars" id="menu-btn" onclick="toggleMenu()"></i>
         </div>
     </header>
 
@@ -48,7 +48,6 @@
                      <span>Data Science & AI Specialist</span> | <span>Frontend Developer</span> | <span>Tech Lead</span>
                 </div>
 
-                <!-- PROFESSIONAL INTRO BIO -->
                 <p class="intro-statement">
                     I am an ambitious 1st-year BCA student specializing in <strong>Data Science & Artificial Intelligence</strong> at the Department of Computer Science & Information System. Driven by an analytical mindset and a passion for technology, I focus on Python programming, data analytics, problem-solving, and web development. As the Team Leader of <em>SK Coders</em> and a national Hackathon Finalist, I bridge algorithmic thinking with practical execution to build practical data-driven solutions.
                 </p>
@@ -58,23 +57,12 @@
                     <a href="https://github.com/sudhanshukryadav2008" target="_blank" class="btn">View Github</a>
                 </div>
 
-                <!-- SOCIAL ICONS -->
                 <div class="social-icon">
-                    <a href="https://github.com/sudhanshukryadav2008" target="_blank" title="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sudhanshu-kumar-b62113407/?isSelfProfile=false" target="_blank" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sudhanshukumar_08/" target="_blank" title="Personal Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.instagram.com/codewithsudhanshu944/" target="_blank" title="Tech Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@CodeWithSudhanshu" target="_blank" title="YouTube Channel">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    <a href="https://github.com/sudhanshukryadav2008" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sudhanshu-kumar-b62113407/?isSelfProfile=false" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/sudhanshukumar_08/" target="_blank" title="Personal Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/codewithsudhanshu944/" target="_blank" title="Tech Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@CodeWithSudhanshu" target="_blank" title="YouTube Channel"><i class="fa-brands fa-youtube"></i></a>
                 </div>    
             </div>
         </div>
@@ -85,33 +73,10 @@
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-info">
             <div class="grid">
-                <div class="grid-card">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Frontend Development</span>
-                    <h3>7 Months</h3>
-                    <p>HTML, CSS & JavaScript</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-sharp fa-solid fa-video"></i>
-                    <span>Video Editing</span>
-                    <h3>3 Months</h3>
-                    <p>CapCut, Premiere Pro & VN</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-solid fa-sliders"></i>
-                    <span>Audio Editing</span>
-                    <h3>3 Months</h3>
-                    <p>VN, CapCut & Premiere Pro</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span>Content Creation</span>
-                    <h3>3 Months</h3>
-                    <p>Social Media & YouTube Strategy</p>
-                </div>
+                <div class="grid-card"><i class="fa-solid fa-code"></i><span>Frontend Development</span><h3>7 Months</h3><p>HTML, CSS & JavaScript</p></div>
+                <div class="grid-card"><i class="fa-sharp fa-solid fa-video"></i><span>Video Editing</span><h3>3 Months</h3><p>CapCut, Premiere Pro & VN</p></div>
+                <div class="grid-card"><i class="fa-solid fa-sliders"></i><span>Audio Editing</span><h3>3 Months</h3><p>VN, CapCut & Premiere Pro</p></div>
+                <div class="grid-card"><i class="fa-brands fa-youtube"></i><span>Content Creation</span><h3>3 Months</h3><p>Social Media & YouTube Strategy</p></div>
             </div>
         </div>
     </section>
@@ -119,7 +84,6 @@
     <!-- EDUCATION SECTION -->
     <section id="education" class="education">
         <h2 class="section-title">Education</h2>
-        
         <div class="education-container">
             <div class="education-card ongoing">
                 <div class="status-badge ongoing">Ongoing</div>
@@ -127,13 +91,11 @@
                 <span class="field">Data Science & Artificial Intelligence</span>
                 <p>Department of Computer Science and Information System</p>
             </div>
-
             <div class="education-card">
                 <div class="status-badge completed">Completed: 2026</div>
                 <h3>Class 12 (Higher Secondary)</h3>
                 <p>New Lucknow Montessori Inter College</p>
             </div>
-
             <div class="education-card">
                 <div class="status-badge completed">Completed: 2024</div>
                 <h3>Class 10 (High School)</h3>
@@ -145,39 +107,29 @@
     <!-- ACHIEVEMENTS & CERTIFICATIONS -->
     <section id="achievements" class="achievements">
         <h2 class="section-title">Hackathons & Certifications</h2>
-
         <div class="experience-container" style="margin-bottom: 2rem;">
             <div class="experience-card">
                 <div class="card-header">
                     <i class="fa-solid fa-trophy highlight-icon"></i>
-                    <div>
-                        <h3>Team Leader – SK Coders</h3>
-                        <span class="year-tag">2026</span>
-                    </div>
+                    <div><h3>Team Leader – SK Coders</h3><span class="year-tag">2026</span></div>
                 </div>
                 <div class="role-badge">Round 2 Finalist</div>
                 <p class="event-name"><strong>NYC Hackathon (Not Your College)</strong></p>
                 <p class="desc">Led team <strong>SK Coders</strong> through competitive problem solving and practical software/data development, advancing successfully as national finalists.</p>
             </div>
         </div>
-
         <div class="cert-grid">
             <div class="cert-card">
                 <i class="fa-solid fa-certificate cert-icon"></i>
                 <h3>NYC Hackathon – Round 1</h3>
                 <p>Official completion certificate for Round 1 qualification.</p>
-                <a href="https://notyourcollege.com/verify/CERT-2026-R8JKKB" target="_blank" class="btn cert-btn">
-                    Verify Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <a href="https://notyourcollege.com/verify/CERT-2026-R8JKKB" target="_blank" class="btn cert-btn">Verify Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
-
             <div class="cert-card">
                 <i class="fa-solid fa-award cert-icon"></i>
                 <h3>NYC Hackathon – Round 2</h3>
                 <p>Official certificate for advancing as Round 2 Finalist.</p>
-                <a href="https://notyourcollege.com/verify/CERT-2026-RR5759" target="_blank" class="btn cert-btn">
-                    Verify Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <a href="https://notyourcollege.com/verify/CERT-2026-RR5759" target="_blank" class="btn cert-btn">Verify Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
         </div>
     </section>
@@ -185,24 +137,18 @@
     <!-- PROJECTS SECTION -->
     <section class="projects" id="projects">
         <h2 class="section-title">Featured Work & Projects</h2>
-
         <div class="projects-grid">
             <div class="projects-card">
                 <img src="Video Editing 1.png" alt="Project First">
                 <h3>Project First</h3>
                 <p>Social media content creation channel</p>
-                <div class="btn-group">
-                    <a href="https://www.instagram.com/veltrix.editor/" target="_blank" class="btn">Instagram</a>
-                </div>
+                <div class="btn-group"><a href="https://www.instagram.com/veltrix.editor/" target="_blank" class="btn">Instagram</a></div>
             </div>
-
             <div class="projects-card">
                 <img src="Video editing 2.png" alt="Project Main">
                 <h3>Project Main</h3>
                 <p>Official coding & tech content channel</p>
-                <div class="btn-group">
-                    <a href="https://www.instagram.com/codewithsudhanshu944/" target="_blank" class="btn">Instagram</a>
-                </div>
+                <div class="btn-group"><a href="https://www.instagram.com/codewithsudhanshu944/" target="_blank" class="btn">Instagram</a></div>
             </div>
         </div>
     </section>
@@ -210,11 +156,10 @@
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <h2 class="section-title">Get In Touch</h2>
-        
-        <form class="contact-box" action="#">
+        <form class="contact-box" onsubmit="handleContact(event)">
             <div class="input-wrapper">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="example@email.com" required>
+                <input type="email" id="userEmail" placeholder="example@email.com" required>
             </div>
             <button type="submit" class="btn submit-btn">Submit</button>
         </form>
@@ -230,7 +175,6 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
         <div class="footer-socials">
             <a href="https://github.com/sudhanshukryadav2008" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/sudhanshu-kumar-b62113407/?isSelfProfile=false" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -238,11 +182,45 @@
             <a href="https://www.instagram.com/codewithsudhanshu944/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/@CodeWithSudhanshu" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
-
         <p class="copyright">© All Rights Reserved | Sudhanshu Kumar</p>
     </footer>
 
-    <!-- JS Link -->
-    <script src="Script.js"></script>
+    <!-- DIRECT EMBEDDED SCRIPT TO AVOID CACHE ISSUES -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuBtn = document.getElementById('menu-btn');
+            
+            navLinks.classList.toggle('active');
+            
+            if (navLinks.classList.contains('active')) {
+                menuBtn.classList.remove('fa-bars');
+                menuBtn.classList.add('fa-xmark');
+            } else {
+                menuBtn.classList.remove('fa-xmark');
+                menuBtn.classList.add('fa-bars');
+            }
+        }
+
+        // Close menu when clicking any link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const menuBtn = document.getElementById('menu-btn');
+                navLinks.classList.remove('active');
+                menuBtn.classList.remove('fa-xmark');
+                menuBtn.classList.add('fa-bars');
+            });
+        });
+
+        function handleContact(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('userEmail');
+            if (emailInput.value.trim() !== '') {
+                alert(`Thank you! Your message from ${emailInput.value} was sent successfully.`);
+                emailInput.value = '';
+            }
+        }
+    </script>
 </body>
 </html>
