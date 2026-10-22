@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
             
-            // Toggle between bars and close icon
+            // Toggle icon between bars and close cross
             if (navLinks.classList.contains('active')) {
                 menuBtn.classList.remove('fa-bars');
                 menuBtn.classList.add('fa-xmark');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking any navigation link
+    // Close mobile menu when clicking any nav link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close mobile menu when clicking anywhere outside the navbar
+    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navLinks && navLinks.classList.contains('active')) {
             if (!navLinks.contains(e.target) && e.target !== menuBtn) {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 2. Scroll Spy (Highlight active section in navbar) ---
+    // --- 2. Scroll Spy (Highlight active section) ---
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
